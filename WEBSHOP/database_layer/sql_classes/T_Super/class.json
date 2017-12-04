@@ -1,0 +1,55 @@
+{
+	"classtype": "kTable",
+	"internalversion": 3,
+	"designtaskname": "rtTask",
+	"cvardefs": [
+
+	],
+	"ivardefs": [
+		{
+			"name": "iErrorText",
+			"order": 3,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000
+		},
+		{
+			"name": "iOldRow",
+			"order": 2,
+			"type": "kRow",
+			"subtype": "",
+			"sublen": 0,
+			"desc": "will beused to have a reference for updating"
+		},
+		{
+			"name": "iPrimaryKeyName",
+			"order": 1,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000
+		},
+		{
+			"name": "iSQLText",
+			"order": 4,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000
+		}
+	],
+	"properties": {
+		"collectperformancedata": false,
+		"componenticon": 0,
+		"componenttype": "kCompStoreHidden",
+		"createdate": "2017-02-01 16:27:54",
+		"desc": "",
+		"editor": "",
+		"editordata": "",
+		"external": false,
+		"issupercomponent": false,
+		"moddate": "2011-11-22 10:22:09",
+		"showascheckedout": false,
+		"sqlclassname": "",
+		"userinfo": "",
+		"version": "1.1.2"
+	}
+}

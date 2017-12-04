@@ -1,0 +1,2 @@
+Do $cinst.$sessionobject.$assign(tSessObj)     ;; assigns the session object to this instance
+Do method loadPrimaryKeyName     ;; loads the primary key name into the iPrimaryKeyName variable

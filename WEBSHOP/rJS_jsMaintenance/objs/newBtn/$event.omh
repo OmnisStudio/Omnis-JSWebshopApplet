@@ -1,0 +1,6 @@
+On evClick
+	Do iDataRow.$clear()
+	Calculate iDataRow.product_isfood as 0     ;; will be null otherwise, unless this is set with the checkbox
+	Do iProductList.$line.$assign(0)
+	Do iDataRow.$setNextProductNumber()     ;; automatically loads the next available product number
+	Do $cinst.$objs.pagePane.$currentpage.$assign(2)

@@ -1,0 +1,14 @@
+If iProductList.product_price_[pButtonNumber]>0     ;; price must be greater zero
+	Do iOrderList.$search($ref.order_product_id=iProductList.product_id&$ref.order_size=iProductList.product_size_[pButtonNumber],kTrue,kFalse,kFalse,kFalse)
+	If iOrderList.$line     ;; found
+		Calculate iOrderList.order_amount as iOrderList.order_amount+1
+	Else     ;; new one
+		Do iOrderList.$add(#NULL,#D,iProductList.product_id,iProductList.product_name,iProductList.product_size_[pButtonNumber],1,0,iProductList.product_price_[pButtonNumber])
+		Do iOrderList.$line.$assign(iOrderList.$linecount())
+	End If
+	Calculate iOrderList.total_price as iProductList.product_price_[pButtonNumber]*iOrderList.order_amount
+	Do $cinst.$objs.checkOutBtn.$enabled.$assign(iOrderList.$linecount()>0)
+	Do $cinst.$objs.orderGrid.$redraw()
+Else
+	Do $cinst.$clientcommand('yesnomessage',row(con('Would you like to order >',iProductList.product_size_1,'< instead?'),'Not available','$orderYes'))
+End If

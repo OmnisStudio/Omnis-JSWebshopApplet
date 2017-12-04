@@ -1,0 +1,7 @@
+Do $cinst.$createstatement()
+
+Begin statement
+Sta: {Update RecordIDs Set RecordID = @[pID] Where TableName = @[pTable]}
+
+Do $cinst.$executeSQLScript() Returns lStatus
+Quit method lStatus

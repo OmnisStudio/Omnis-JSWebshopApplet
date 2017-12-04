@@ -1,0 +1,3 @@
+On evLayoutChanged
+	Calculate iCurrBP as pBreakpoint
+	Do method setupSizes

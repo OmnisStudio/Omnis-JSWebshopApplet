@@ -1,0 +1,4 @@
+Set reference statementObjRef to $cinst.$statementobject
+Calculate iErrorText as con(statementObjRef.$errortext,' - ',statementObjeRef.$nativeerrortext)
+Calculate iSQLText as statementObjRef.$sqltext
+;  Breakpoint

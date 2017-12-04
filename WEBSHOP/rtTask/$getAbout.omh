@@ -1,0 +1,24 @@
+Begin text block
+Text: {Shop is an Omnis applet developed using the Javascript controls.} (Carriage return)
+Text: (Carriage return)
+Text: {Function:} (Carriage return)
+Text: {The applet allows you to place orders from the list of products.} (Carriage return)
+Text: (Carriage return)
+Text: {Usage:} (Carriage return)
+Text: {Click into the list of products and place an order using one of the 'Order Now' buttons for a specific product.}
+Text: { The order appears within the order list on the right hand side.}
+Text: { The radio buttons can be used to filter the product list.} (Carriage return)
+Text: (Carriage return)
+Text: {After an order is placed using the 'Check Out' button, the order details & customer data are saved in the database.}
+Text: (Carriage return)
+Text: {Switch to the ShopOwner form and press Refresh to see the order} (Carriage return)
+Text: (Carriage return)
+Text: {Components:} (Carriage return)
+Text: {The SQL tables are defined using table classes that handle all SQL inherited from T_Super table class.} (Carriage return)
+Text: (Carriage return)
+Text: {Extending:} (Carriage return)
+Text: {The applet could be extended by creating an email object that automatically sends out an email when a new order is placed.} (Carriage return)
+Text: {Have a look at the Class Wizard - Net Classes and go to the Email Client to create an email object class.} (Carriage return)
+End text block
+Get text block lAboutText
+Quit method lAboutText

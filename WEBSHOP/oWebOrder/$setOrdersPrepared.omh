@@ -1,0 +1,9 @@
+;  sets all selected lines
+Do pOrderList.$first(kTrue) Returns lineRef     ;; go to the first selected line
+While lineRef
+	Do orderRow.$definefromsqlclass($tables.T_Orders,'order_id','order_prepared')
+	Calculate orderRow.order_id as pOrderList.order_id     ;; get the
+	Calculate orderRow.order_prepared as #D
+	Do orderRow.$update()
+	Do pOrderList.$next(lineRef,kTrue) Returns lineRef     ;; next selected line
+End While

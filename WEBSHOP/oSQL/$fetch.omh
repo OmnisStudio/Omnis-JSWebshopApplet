@@ -1,0 +1,6 @@
+;  return the next row of data
+
+If pListOrRow.$colcount=0
+	Do pListOrRow.$define()
+End If
+Do iStmtObj.$fetch(pListOrRow)

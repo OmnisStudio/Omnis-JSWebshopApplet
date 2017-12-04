@@ -1,0 +1,10 @@
+Do $cinst.$createstatement()
+
+Begin statement
+Sta: {Select RecordID From RecordIDs Where TableName = @[pTable]}
+
+Do $cinst.$executeSQLScript() Returns lStatus
+Do $cinst.$fetch(lRow)
+
+Calculate pID as lRow.C1
+Quit method lStatus

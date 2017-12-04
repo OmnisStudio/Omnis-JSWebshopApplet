@@ -1,0 +1,23 @@
+;  returns a flat tree list of the available products
+Do $ctask.tvSessioObj.$newstatement('i') Returns statObj
+Begin statement
+Sta: {SELECT product_group,product_name,0,product_id}
+Sta: {FROM products}
+Sta: {WHERE product_isfood = 1}
+Sta: {ORDER BY product_group, product_name}
+End statement
+Do statObj.$prepare() Returns ok
+Calculate #S1 as statObj.$sqltext
+Do statObj.$execute() Returns ok
+Do statObj.$fetch(list,kFetchAll)
+Do list.$first()
+While list.$line>0
+	Calculate product_group as list.product_group
+	Do list.$addbefore(list.$line,product_group)
+	Do list.$search($ref.product_group<>product_group,kFalse,kFalse,kFalse,kFalse)
+End While
+Do list.$cols.$add('enterable',kInteger,k32bitint) Returns #F
+Do list.$cols.$add('isexpanded',kInteger,k32bitint) Returns #F
+Do list.$cols.$add('textcolor',kInteger,k32bitint) Returns #F
+Do list.$sendall($ref.c3.$assign(613))
+Quit method list

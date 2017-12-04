@@ -1,0 +1,3 @@
+On evAfter
+	Do method newItem
+	Do $cinst.$setcurfield('product_name')     ;; ST/JS/176

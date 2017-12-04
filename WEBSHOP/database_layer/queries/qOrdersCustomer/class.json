@@ -1,0 +1,19 @@
+{
+	"classtype": "kQuery",
+	"internalversion": 3,
+	"nextident": 32018,
+	"properties": {
+		"componenticon": 0,
+		"componenttype": "kCompStoreHidden",
+		"createdate": "2017-02-01 16:27:38",
+		"desc": "",
+		"editor": "",
+		"editordata": "",
+		"external": true,
+		"extraquerytext": "WHERE Products.product_id = Orders.order_product_id AND order_customer_id = customer_id",
+		"moddate": "2011-11-18 15:40:41",
+		"showascheckedout": false,
+		"userinfo": "",
+		"version": "1.1.2"
+	}
+}

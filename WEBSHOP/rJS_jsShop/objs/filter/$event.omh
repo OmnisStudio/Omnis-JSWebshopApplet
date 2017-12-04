@@ -1,0 +1,3 @@
+On evClick
+	Calculate whereClause as con('WHERE product_group = ',kSq,iGroupList.[pNewVal].product_group,kSq)
+	Do $cinst.$objs.productList.$build(whereClause)

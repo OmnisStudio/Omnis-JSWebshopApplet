@@ -1,0 +1,20 @@
+{
+	"classtype": "kSchema",
+	"internalversion": 3,
+	"nextident": 32003,
+	"properties": {
+		"componenticon": 0,
+		"componenttype": "kCompStoreHidden",
+		"createdate": "2017-02-01 16:27:35",
+		"createinstancewhensubtype": true,
+		"desc": "",
+		"editor": "",
+		"editordata": "",
+		"external": true,
+		"moddate": "2011-10-04 10:48:54",
+		"servertablename": "RecordIDs",
+		"showascheckedout": false,
+		"userinfo": "",
+		"version": "1.1.2"
+	}
+}

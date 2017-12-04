@@ -1,0 +1,10 @@
+Do list.$definefromsqlclass($tables.T_products,'product_group','product_name')
+Do list.$select('WHERE product_isfood = 1 ORDER BY product_group, product_name')
+Do list.$fetch(kFetchAll)
+Do list.$first()
+While list.$line>0
+	Calculate product_group as list.product_group
+	Do list.$addbefore(list.$line,product_group)
+	Do list.$search($ref.product_group<>product_group,kFalse,kFalse,kFalse,kFalse)
+End While
+Quit method list

@@ -1,0 +1,4 @@
+On evClick
+	Do iDataRow.$clear()
+	Do $cinst.$objs.pagePane.$currentpage.$assign(1)
+	Do method handleButtons

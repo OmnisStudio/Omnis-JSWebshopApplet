@@ -1,0 +1,4 @@
+End statement
+Do iStmtObj.$prepare()
+Do iStmtObj.$execute() Returns lSQLExec
+Quit method lSQLExec

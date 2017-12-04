@@ -1,0 +1,9 @@
+Do iDataRow.$assignrow(iProductList,kTrue)     ;; copy it to the row as this object needs to do the delete
+Do iDataRow.$delete() Returns ok
+If ok
+	Do iProductList.$remove(iProductList.$line)     ;; remove the current line
+	Do iDataRow.$clear()     ;; clear the data row
+	Do $cfield.$redraw()
+Else
+	Do $cinst.$showmessage(iProductList.$getErrorText())
+End If

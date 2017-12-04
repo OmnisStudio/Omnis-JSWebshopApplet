@@ -1,0 +1,5 @@
+;  since this is a combo box the user may have entered a new item
+Do iGroupList.$search($ref.product_group=iDataRow.product_group,kTrue,kFalse,kFalse,kFalse)
+If iGroupList.$line=0     ;; not found in the group list -> hence a new group
+	Do iGroupList.$add().product_group.$assign(iDataRow.product_group)     ;; adds a new group to the list
+End If

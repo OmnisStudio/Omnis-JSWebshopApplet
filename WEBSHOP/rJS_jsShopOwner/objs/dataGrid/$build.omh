@@ -1,0 +1,3 @@
+Do ivDataObj.$getOrderList(iType) Returns iOrderList
+Do $cfield.$redraw()
+;  Do $cinst.$objs.timer.$running.$assign(kTrue)     ;; possible using a timer object

@@ -1,0 +1,16 @@
+Calculate lPath as $clib().$pathname
+Do FileOps.$splitpathname(lPath,lDrive,lDir,lFile,lExt)
+Calculate lLibName as $clib().$name
+Calculate iHost as low(con(lDrive,lDir,lLibName,".db"))     ;; st/gs/161 - added low() to ensure case is always correct for the supplied datafile
+
+Do tSQLObj.$opencreate.$assign(kTrue)     ;; create a new sqlite database if it does not exist
+
+Do tSQLObj.$logon(iHost,"","",lLibName) Returns lLoggedOn
+
+If not(lLoggedOn)
+	Send to trace log {[(con("WebShop Applet - Error logging on to SQLite db",kSp,iHost))]}
+Else
+	Do method dbValidate     ;; ensure the necessary tables exist
+	Do $clib.$remoteforms.rJS_jsShopOwner.$open("*")
+	Do $clib.$remoteforms.rJS_jsShop.$open("*")
+End If

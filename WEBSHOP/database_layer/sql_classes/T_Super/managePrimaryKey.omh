@@ -1,0 +1,8 @@
+;  this method will get the last primary key for this table from the RecordsID table and
+;  update this table with the new key
+If len(iPrimaryKeyName)>0     ;; only if there is a primary key column
+	Do recordIDRow.$getNextID($cinst.$servertablenames) Returns $cinst.[iPrimaryKeyName]
+	Quit method $cinst.[iPrimaryKeyName]>0     ;; true if the primary key was set
+Else
+	Quit method kTrue     ;; return true anyway - nothing done here
+End If

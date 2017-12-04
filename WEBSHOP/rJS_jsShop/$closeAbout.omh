@@ -1,0 +1,17 @@
+
+If iCurrBP=320
+	;  Do $cinst.$objs.aboutBtn.$text.$assign("About...")
+Else
+	Do $cinst.$beginanimations(500,kJSAnimationCurveEaseOut)
+	Do $cinst.$objs.aboutSubForm.$alpha.$assign(0)
+	Do $cinst.$objs.aboutSubForm.$visible.$assign(kFalse)
+	Do $cinst.$commitanimations()
+	
+	Do $cinst.$objs.aboutSubForm.$visible.$assign(kFalse)
+	Do $cinst.$objs.aboutSubForm.$classname.$assign("rJS_jsEmpty") Returns #F
+	
+	Do method enableForSubPane (kTrue)
+End If
+
+Do $cinst.$objs.aboutBtn.$text.$assign("About...")
+Calculate iAboutOpen as kFalse

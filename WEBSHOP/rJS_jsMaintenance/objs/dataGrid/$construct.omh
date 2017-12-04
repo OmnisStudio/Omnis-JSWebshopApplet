@@ -1,0 +1,2 @@
+Do iProductList.$definefromsqlclass($tables.T_Products)
+Do $cfield.$build()

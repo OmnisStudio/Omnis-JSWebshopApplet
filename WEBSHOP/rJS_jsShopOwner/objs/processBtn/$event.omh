@@ -1,0 +1,3 @@
+On evClick
+	Do ivDataObj.$setOrdersPrepared(iOrderList)
+	Do $cinst.$objs.dataGrid.$build()

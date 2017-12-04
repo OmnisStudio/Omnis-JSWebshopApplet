@@ -1,0 +1,9 @@
+If iCurrBP=320
+	Do $ctask.$getAbout() Returns iAbout
+Else
+	Do $cinst.$objs.pagePane.$currentpage.$assign(1)
+End If
+
+If iAboutOpen
+	Do $cinst.$closeAbout()
+End If

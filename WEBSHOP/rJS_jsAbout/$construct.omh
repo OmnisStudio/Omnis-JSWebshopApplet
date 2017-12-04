@@ -1,0 +1,10 @@
+Do $cinst.$beginanimations(500,kJSAnimationCurveEaseIn)
+Calculate $cinst.$alpha as 255
+Do $cinst.$commitanimations()
+
+Calculate iSep as '/'
+
+Calculate iPicPath as con("images",iSep,"applets",iSep,"omnis_webshop_banner1.png")
+Calculate iSplashPath as con("images",iSep,"applets",iSep,"welcome_webshop1.png")
+
+Do $ctask.$getAbout() Returns iAboutText

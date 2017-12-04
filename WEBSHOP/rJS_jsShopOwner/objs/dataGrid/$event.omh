@@ -1,0 +1,11 @@
+On evClick
+	Do $cinst.$objs.timer.$running.$assign(kFalse)     ;; make sure the timer stops as it would remove any selection
+	Do $cinst.$objs.processBtn.$enabled.$assign(kTrue)
+	
+On evDoubleClick
+	
+On evCellChanged
+	
+On evHeaderClick
+	
+On evHeadedListDisplayOrderChanged

@@ -1,0 +1,4 @@
+;  build the select table
+
+Do pList.$define()
+Do iStmtObj.$fetch(pList,kFetchAll)

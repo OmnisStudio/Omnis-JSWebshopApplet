@@ -1,0 +1,4 @@
+Do method setupSizes
+Do method setupBackgroundPictures
+Do iCustomerRow.$definefromsqlclass($tables.T_Customer)
+Do $cinst.$objs.$sendall($ref.$construct())     ;; triggers all field specific $construct methods

@@ -1,0 +1,9 @@
+Calculate lTable as pRow.$servertablenames
+Calculate lStr as pRow.$createnames()
+
+Do $cinst.$createstatement()
+Begin statement
+Sta: {CREATE TABLE [lTable] ([lStr])}
+
+Do $cinst.$executeSQLScript() Returns lStatus
+Quit method lStatus

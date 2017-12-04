@@ -1,0 +1,21 @@
+Do lTablesForAppList.$define(lTableName,lSchemaClassName)
+Do $schemas.$appendlist(lTablesForAppList,$ref.$servertablename,$ref.$name)     ;; loads all schemas into the list with all servertablenames used there
+Do lTablesForAppList.$search($ref.lTableName='RecordIDs',kTrue)     ;; selects the RecordIDs line -> used for the $sort below
+Do lTablesForAppList.$sort($ref.$selected(),kTrue)     ;; puts the selected line (RecordIDs) on top as we need to process this table first
+Do tSQLObj.$getTables() Returns lDBTableList     ;; loads the existing tables from the db
+
+For lTablesForAppList.$line from 1 to lTablesForAppList.$linecount() step 1
+	Do lTablesForAppList.$loadcols()     ;; loads the current line of the list into the corresponding variables that are used as column definition
+	Do lDBTableList.$search(lDBTableList.TableOrViewName=lTableName,kTrue,kFalse,kFalse,kFalse)
+	If not(lDBTableList.$line)     ;; if this table is not yet available in the db
+		Do lRow.$definefromsqlclass(lSchemaClassName)     ;; define the row using the schema class
+		Do lRow.$sessionobject.$assign(tSQLObj)     ;; use the database session object
+		Do tSQLObj.$createTable(lRow) Returns lStatus     ;; and finally create the server table there
+		If lStatus     ;; if the table has been created successfully ..
+			;  .. make sure that there will be a record inserted into RecordIDs for every new table
+			If lTableName<>'RecordIDs'     ;; but not for RecordIDs
+				Do method addRecordID (lTableName)     ;; create a new row in the RecordIDs table
+			End If
+		End If
+	End If
+End For

@@ -1,0 +1,6 @@
+;  ensures that there is a record for each table
+Do lRecordIDRow.$sessionobject.$assign($cinst.$getSess())
+Calculate lRecordIDRow.TableName as pTableName
+Calculate lRecordIDRow.RecordID as 0
+Do lRecordIDRow.$insert() Returns ok
+Quit method ok

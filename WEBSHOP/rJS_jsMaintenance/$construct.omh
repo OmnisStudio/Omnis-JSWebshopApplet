@@ -1,0 +1,4 @@
+Do method setupSizes
+Do method setupBackgroundPictures
+Do iDataRow.$definefromsqlclass($tables.T_Products)
+Do $cinst.$objs.$sendall($ref.$construct())     ;; triggers all field specific $construct methods

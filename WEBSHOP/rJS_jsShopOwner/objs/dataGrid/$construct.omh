@@ -1,0 +1,2 @@
+Do iOrderList.$definefromsqlclass($tables.T_qOrders)
+Do $cfield.$build()

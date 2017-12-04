@@ -1,0 +1,6 @@
+If iOldRow.$cols.$count()=0     ;; no old row
+	Calculate iOldRow as $cinst     ;; use the actual row instead, this will work as long as a primary key is used
+End If
+Do $cinst.$default.$update(iOldRow) Returns ok     ;; uses the primary keys of iOldRow to create the WHERECLAUSE
+;  if now primary key was specified in the schema class it will use all colums
+Quit method ok

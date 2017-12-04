@@ -1,0 +1,12 @@
+;  returns the data for the remote form jsShopowner
+Do listCustomer.$definefromsqlclass($tables.T_qOrdersCustomer)
+Calculate whereClause as con('AND (order_paid_date is null or order_paid_date > ',kSq,dadd(kDay,-1,jst(#D,'D:D.M.CY')),kSq,')')
+Switch pType
+	Case 1     ;; only drinks
+		Calculate whereClause as con(whereClause,' AND (product_isfood is null OR product_isfood = 0)')
+	Case 2     ;; only food
+		Calculate whereClause as con(whereClause,' AND (product_isfood = 1 )')
+End Switch
+Do listCustomer.$select(whereClause,' order by order_prepared, order_paid_date')
+Do listCustomer.$fetch(kFetchAll)
+Quit method listCustomer

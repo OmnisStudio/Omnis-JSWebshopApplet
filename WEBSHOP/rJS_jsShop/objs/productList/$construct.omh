@@ -1,0 +1,3 @@
+Do iProductList.$definefromsqlclass($tables.T_Products)     ;; this line is not necessary if the subtype of the list is used
+Calculate whereClause as con('WHERE product_group = ',kSq,'Appetizers',kSq)
+Do $cfield.$build(whereClause)     ;; calls the field specific $build

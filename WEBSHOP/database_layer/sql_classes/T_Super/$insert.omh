@@ -1,0 +1,5 @@
+Do method managePrimaryKey Returns ok
+If ok
+	Do default Returns ok
+End If
+Quit method ok

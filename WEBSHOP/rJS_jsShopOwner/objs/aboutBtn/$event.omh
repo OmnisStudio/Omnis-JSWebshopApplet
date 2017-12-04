@@ -1,0 +1,31 @@
+On evClick
+	If not(iAboutOpen)
+		Calculate iAboutOpen as kTrue
+	Else
+		Calculate iAboutOpen as kFalse
+	End If
+	
+	If not(iCurrBP=320)
+		Do method enableForSubPane (kFalse)
+		Do $cinst.$objs.aboutSubForm.$width.$assign(850)
+		Do $cinst.$objs.aboutSubForm.$height.$assign(610)
+		Do $cinst.$objs.aboutSubForm.$left.$assign(125)
+		Do $cinst.$objs.aboutSubForm.$top.$assign(100)
+		Do $cinst.$objs.aboutSubForm.$classname.$assign("rJS_jsAbout")
+		Do $cinst.$objs.aboutSubForm.$visible.$assign(kTrue)
+		Do $cinst.$beginanimations(500,kJSAnimationCurveEaseIn)
+		Do $cinst.$objs.aboutSubForm.$alpha.$assign(255)
+		Do $cinst.$commitanimations()
+	Else
+		Do $cobj.$text.$assign("Back")
+		Do $cinst.$objs.pagePane.$objs.refreshBtn.$visible.$assign(kFalse)
+		Do $cinst.$objs.pagePane.$objs.processBtn.$visible.$assign(kFalse)
+		Do $cinst.$objs.pagePane.$currentpage.$assign(3)
+		If not(iAboutOpen)
+			Do $cobj.$text.$assign("About...")
+			Calculate iAboutOpen as kFalse
+			Do $cinst.$objs.pagePane.$objs.refreshBtn.$visible.$assign(kTrue)
+			Do $cinst.$objs.pagePane.$objs.processBtn.$visible.$assign(kTrue)
+			Do $cinst.$objs.pagePane.$currentpage.$assign(1)
+		End If
+	End If

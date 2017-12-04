@@ -1,0 +1,2 @@
+On evClick
+	Do $cinst.$clientcommand('noyesmessage',row('Do you really want to delete the selected record?','Delete record','$deleteRecord'))

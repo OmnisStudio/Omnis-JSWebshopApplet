@@ -1,0 +1,6 @@
+;  sets the next available product number
+;  used when a user is about to add a new product
+;  please note that this does not prevent for double product numbers
+;  you would need to check this in $insert
+Do $cinst.$statementobject().$execdirect('SELECT max(product_number)+1 FROM Products')
+Do $cinst.$statementobject().$fetchinto($cinst.product_number)

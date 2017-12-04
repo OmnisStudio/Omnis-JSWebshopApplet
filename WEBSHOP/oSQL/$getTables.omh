@@ -1,0 +1,7 @@
+;  list all server tables
+
+Do $cinst.$createstatement()
+Do iStmtObj.$tables(kStatementServerTable)
+Do $cinst.$fetchAll(lList)
+
+Quit method lList

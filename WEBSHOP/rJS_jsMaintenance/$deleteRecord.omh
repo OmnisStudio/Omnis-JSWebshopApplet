@@ -1,0 +1,2 @@
+Do $cinst.$objs.dataGrid.$deleteCurrent()
+Do method handleButtons

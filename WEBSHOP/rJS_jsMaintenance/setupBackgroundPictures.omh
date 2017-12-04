@@ -1,0 +1,3 @@
+Calculate separator as '/'
+Calculate iPicPath as con("images",separator,"applets",separator,"omnis_webshop_banner1.png")
+Calculate iSplashPath as con("images",separator,"applets",separator,"welcome_webshop_big1.png")

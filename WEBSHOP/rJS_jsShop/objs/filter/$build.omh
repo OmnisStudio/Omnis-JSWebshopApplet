@@ -1,0 +1,9 @@
+Do iGroupList.$selectdistinct()
+Do iGroupList.$fetch(kFetchAll)
+For iGroupList.$line from 1 to iGroupList.$linecount() step 1     ;; loop through the list
+	Calculate text as con(text,mid($prefs.$separators,3,1),iGroupList.product_group)     ;; uses the localized separator (possibly semicolon)
+End For
+Calculate text as mid(text,2,len(text))
+Do $cfield.$minvalue.$assign(1)
+Do $cfield.$maxvalue.$assign(iGroupList.$linecount())
+Do $cfield.$text.$assign(text)

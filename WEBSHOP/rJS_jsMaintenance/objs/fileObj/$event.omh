@@ -1,0 +1,2 @@
+On evFileUploaded
+	Calculate iDataRow.product_picture as tData

@@ -1,0 +1,240 @@
+[
+	{
+		"name": "$construct",
+		"ident": 1,
+		"order": 1,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$destruct",
+		"ident": 2,
+		"order": 2,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$getProductTree",
+		"ident": 0,
+		"order": 3,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+			{
+				"name": "list",
+				"order": 1,
+				"type": "kList",
+				"subtype": "",
+				"sublen": 0
+			},
+			{
+				"name": "ok",
+				"order": 3,
+				"type": "kBoolean",
+				"subtype": 0,
+				"sublen": 0
+			},
+			{
+				"name": "product_group",
+				"order": 2,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000
+			},
+			{
+				"name": "statObj",
+				"order": 4,
+				"type": "kObject",
+				"subtype": "",
+				"sublen": 0
+			}
+		]
+	},
+	{
+		"name": "$getProductTree2",
+		"ident": 3,
+		"order": 4,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+			{
+				"name": "list",
+				"order": 1,
+				"type": "kList",
+				"subtype": "T_products",
+				"sublen": 0
+			},
+			{
+				"name": "product_group",
+				"order": 2,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000
+			}
+		]
+	},
+	{
+		"name": "$getProductList",
+		"ident": 4,
+		"order": 5,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+			{
+				"name": "list",
+				"order": 1,
+				"type": "kList",
+				"subtype": "T_products",
+				"sublen": 0
+			}
+		]
+	},
+	{
+		"name": "$processOrder",
+		"ident": 5,
+		"order": 6,
+		"pvardefs": [
+			{
+				"name": "pCustomerRow",
+				"order": 1,
+				"type": "kRow",
+				"subtype": "",
+				"sublen": 0,
+				"param": 1
+			},
+			{
+				"name": "pOrderList",
+				"order": 3,
+				"type": "kList",
+				"subtype": "",
+				"sublen": 0,
+				"param": 2
+			}
+		],
+		"lvardefs": [
+			{
+				"name": "ok",
+				"order": 4,
+				"type": "kBoolean",
+				"subtype": 0,
+				"sublen": 0
+			},
+			{
+				"name": "orderRow",
+				"order": 2,
+				"type": "kRow",
+				"subtype": "T_orders",
+				"sublen": 0
+			}
+		]
+	},
+	{
+		"name": "$getErrorText",
+		"ident": 6,
+		"order": 7,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$getFieldName",
+		"ident": 7,
+		"order": 8,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "--ShopOwner--",
+		"ident": 10,
+		"order": 9,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		],
+		"empty": true
+	},
+	{
+		"name": "$getOrderList",
+		"ident": 8,
+		"order": 10,
+		"pvardefs": [
+			{
+				"name": "pType",
+				"order": 2,
+				"type": "kInteger",
+				"subtype": "kShortint",
+				"sublen": 0,
+				"param": 1,
+				"initval": "0",
+				"desc": "0 = all, 1 = drinks only, 2= food only"
+			}
+		],
+		"lvardefs": [
+			{
+				"name": "listCustomer",
+				"order": 1,
+				"type": "kList",
+				"subtype": "T_qOrdersCustomer",
+				"sublen": 0
+			},
+			{
+				"name": "whereClause",
+				"order": 3,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000
+			}
+		]
+	},
+	{
+		"name": "$setOrdersPrepared",
+		"ident": 9,
+		"order": 11,
+		"pvardefs": [
+			{
+				"name": "pOrderList",
+				"order": 1,
+				"type": "kList",
+				"subtype": "",
+				"sublen": 0,
+				"param": 1
+			}
+		],
+		"lvardefs": [
+			{
+				"name": "lineRef",
+				"order": 2,
+				"type": "kItemref",
+				"subtype": "",
+				"sublen": 0
+			},
+			{
+				"name": "orderRow",
+				"order": 3,
+				"type": "kRow",
+				"subtype": "T_Orders",
+				"sublen": 0
+			}
+		]
+	}
+]

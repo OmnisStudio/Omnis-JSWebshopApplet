@@ -1,0 +1,9 @@
+On evClick
+	If iWebOrderObj.$processOrder(iCustomerRow,iOrderList)
+		Do iOrderList.$clear()
+		Do iCustomerRow.$clear()
+		Do $cinst.$showmessage('Please check the incoming order in jsShopOwner','Thank you for your order')
+	Else
+		Do $cinst.$setcurfield(iWebOrderObj.$getFieldName())
+		Do $cinst.$showmessage(iWebOrderObj.$getErrorText(),'ERROR')
+	End If

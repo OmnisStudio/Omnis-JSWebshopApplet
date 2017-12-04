@@ -1,0 +1,5 @@
+Do $cinst.$objs.pagePane.$objs.orderGrid.$hideselection.$assign(not(pEnable))
+Do $cinst.$objs.pagePane.$enabled.$assign(pEnable)
+Do $cinst.$objs.aboutBtn.$enabled.$assign(pEnable)
+
+Do $cinst.$objs.pagePane.$objs.backBtn.$enabled.$assign(not(pEnable))

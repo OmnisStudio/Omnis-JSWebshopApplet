@@ -1,0 +1,6 @@
+Do list.$definefromsqlclass($tables.T_products,'product_id','product_number','product_group','product_name','product_desc','product_size_1','product_size_2','product_size_3','product_price_1','product_price_2','product_price_3')
+Do list.$select('WHERE product_isfood = 1')
+Do list.$fetch(kFetchAll)
+Do list.$cols.$add('picture_url',kCharacter,kSimplechar,255)
+Do list.$sendall($ref.picture_url.$assign(con('pic_',$sendallref.product_number,'.jpg')))
+Quit method list

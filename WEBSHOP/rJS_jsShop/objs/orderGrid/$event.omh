@@ -1,0 +1,11 @@
+On evClick
+On evExecuteContextMenu
+	If pCommandID=1001
+		Do iOrderList.$remove(iOrderList.$line)
+		Do $cinst.$redraw()
+	End If
+On evCellChanged
+	
+On evHeaderClick
+	
+On evHeadedListDisplayOrderChanged

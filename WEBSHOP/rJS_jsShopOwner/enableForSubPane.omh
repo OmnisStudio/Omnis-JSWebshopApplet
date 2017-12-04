@@ -1,0 +1,3 @@
+Do $cinst.$objs.pagePane.$objs.dataGrid.$hideselection.$assign(not(pEnable))
+Do $cinst.$objs.pagePane.$enabled.$assign(pEnable)
+Do $cinst.$objs.aboutBtn.$enabled.$assign(pEnable)

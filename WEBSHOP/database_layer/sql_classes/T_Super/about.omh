@@ -1,0 +1,5 @@
+;  use this table class as your topmost table class in the inheritance tree
+;  it will deal with the session object automatically and
+;  also make sure that any insert will generate a primary key
+;  overwrite its methods if you would like to implement more specific rules in your concrete class
+;  and call the 'Do inherited' command in order to execute the code in the super class.

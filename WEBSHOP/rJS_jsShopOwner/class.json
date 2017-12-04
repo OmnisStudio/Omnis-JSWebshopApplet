@@ -1,0 +1,177 @@
+{
+	"classtype": "kRemoteForm",
+	"internalversion": 339,
+	"designtaskname": "rtTask",
+	"nextident": 1014,
+	"lastgroupident": 0,
+	"cvardefs": [
+		{
+			"name": "kHavePic",
+			"order": 1,
+			"type": "kBoolean",
+			"subtype": 0,
+			"sublen": 0,
+			"initval": "kTrue"
+		}
+	],
+	"ivardefs": [
+		{
+			"name": "iAbout",
+			"order": 1,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000
+		},
+		{
+			"name": "iAboutOpen",
+			"order": 13,
+			"type": "kBoolean",
+			"subtype": 0,
+			"sublen": 0,
+			"initval": "kFalse"
+		},
+		{
+			"name": "iCurrBP",
+			"order": 14,
+			"type": "kInteger",
+			"subtype": "k64bitint",
+			"sublen": 0
+		},
+		{
+			"name": "iCustomerRow",
+			"order": 6,
+			"type": "kRow",
+			"subtype": "T_Customer",
+			"sublen": 0
+		},
+		{
+			"name": "iGroupList",
+			"order": 8,
+			"type": "kList",
+			"subtype": "T_qGroups",
+			"sublen": 0
+		},
+		{
+			"name": "iOrderList",
+			"order": 12,
+			"type": "kList",
+			"subtype": "T_qOrders",
+			"sublen": 0
+		},
+		{
+			"name": "iPicPath",
+			"order": 5,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000
+		},
+		{
+			"name": "iProductList",
+			"order": 9,
+			"type": "kList",
+			"subtype": "T_Products",
+			"sublen": 0
+		},
+		{
+			"name": "iRadioGroup",
+			"order": 7,
+			"type": "kInteger",
+			"subtype": "kShortint",
+			"sublen": 0,
+			"initval": "1"
+		},
+		{
+			"name": "iScreensize",
+			"order": 2,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000
+		},
+		{
+			"name": "iSplashPath",
+			"order": 3,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000
+		},
+		{
+			"name": "iType",
+			"order": 11,
+			"type": "kInteger",
+			"subtype": "kShortint",
+			"sublen": 0
+		},
+		{
+			"name": "ivDataObj",
+			"order": 10,
+			"type": "kObject",
+			"subtype": "oWebOrder",
+			"sublen": 0
+		},
+		{
+			"name": "iWebOrderObj",
+			"order": 4,
+			"type": "kObject",
+			"subtype": "oWebOrder",
+			"sublen": 0
+		}
+	],
+	"properties": {
+		"aligntogrid": false,
+		"alpha": 255,
+		"alwaysenabledobject": "",
+		"animatelayouttransitions": false,
+		"backalpha": 255,
+		"backcolor": "kColor3DFace",
+		"backpattern": 0,
+		"cancelkeyobject": "",
+		"collectperformancedata": false,
+		"componenticon": 0,
+		"componenttype": "kCompStoreHidden",
+		"contextmenu": "",
+		"createdate": "2017-11-29 15:15:31",
+		"currentlayoutbreakpoint": 320,
+		"defaultappearance": "kAppearanceiOS",
+		"desc": "",
+		"designshowmobiletitle": true,
+		"disabledefaultcontextmenu": false,
+		"editor": "",
+		"editordata": "",
+		"events": "evLayoutChanged",
+		"external": true,
+		"forecolor": "kWhite",
+		"horzgrid": 8,
+		"horzscroll": false,
+		"inheritedorder": 1,
+		"issupercomponent": false,
+		"layoutbreakpoints": "320,600",
+		"layouttype": "kLayoutTypeResponsive",
+		"left": 138,
+		"moddate": "2017-12-04 11:16:16",
+		"okkeyobject": "",
+		"serverlessclient": false,
+		"showascheckedout": false,
+		"showgrid": false,
+		"sizetogrid": false,
+		"startfield": 0,
+		"title": {
+			"type": 0,
+			"calc": "New remote form"
+		},
+		"top": 23,
+		"userinfo": "",
+		"version": "1.1.2",
+		"vertgrid": 8,
+		"vertscroll": false
+	},
+	"layout": {
+		"width": 795,
+		"height": 717,
+		"320": {
+			"height": 650
+		},
+		"600": {
+			"height": 650
+		}
+	}
+}

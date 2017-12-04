@@ -1,0 +1,12 @@
+;  returns the next available ID and updates the RecordsIDS
+;  PLEASE NOTE:
+;  if other applications have access to this table you would need
+;  to implement a proper record locking and transaction
+;  please see the documentation about transaction
+Begin critical block     ;; ensures that this client executes this code exlusively in multithreaded mode
+	Do $cinst.$select('WHERE TableName =',kSq,pTableName,kSq)
+	Do $cinst.$fetch()     ;; $cinst.TableName
+	Calculate $cinst.RecordID as $cinst.RecordID+1     ;; encrease the record ID
+	Do $cinst.$update()
+End critical block     ;; allows multi threaded again if the command 'start server' was used sometime
+Quit method $cinst.RecordID

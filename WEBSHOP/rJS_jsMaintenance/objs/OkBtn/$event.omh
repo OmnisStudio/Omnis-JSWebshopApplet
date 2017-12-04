@@ -1,0 +1,8 @@
+On evClick
+	Do iDataRow.$save() Returns ok
+	If ok
+		Do $cinst.$objs.dataGrid.$refresh()     ;; make sure the changes are reflected in the list
+		Do $cinst.$objs.pagePane.$currentpage.$assign(1)
+	Else
+		Do $cinst.$showmessage(iDataRow.$getErrorText())
+	End If

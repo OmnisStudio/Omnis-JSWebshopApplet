@@ -1,0 +1,2 @@
+On evClick
+	Do $cinst.$objs.pagePane.$currentpage.$assign(3)

@@ -1,0 +1,6 @@
+If isnull($cinst.[iPrimaryKeyName])
+	Do $cinst.$insert() Returns ok
+Else     ;; if there is a primary key set we need to fire an update
+	Do $cinst.$update() Returns ok
+End If
+Quit method ok

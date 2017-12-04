@@ -1,0 +1,3 @@
+On evClick
+	Do iDataRow.$assignrow(iProductList)
+	Do $cinst.$objs.pagePane.$currentpage.$assign(2)

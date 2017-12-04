@@ -1,0 +1,2 @@
+On evTimer
+	Do $cinst.$objs.dataGrid.$build()

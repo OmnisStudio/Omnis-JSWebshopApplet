@@ -1,0 +1,9 @@
+Do iGroupList.$definefromsqlclass($tables.T_qGroups)
+Do $cfield.$build()
+
+Calculate iProductCatList as iGroupList
+Do iProductCatList.$line.$assign(1)
+;
+;  Do $cinst.$objs.pagePane.$objs.selectLabel.$visible.$assign(kTrue)
+;  Do $cinst.$objs.pagePane.$objs.productCatList.$visible.$assign(kTrue)
+;  Do $cinst.$objs.pagePane.$objs.filter.$visible.$assign(kFalse)

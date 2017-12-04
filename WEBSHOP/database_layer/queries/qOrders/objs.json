@@ -1,0 +1,123 @@
+[
+	{
+		"ident": 32001,
+		"order": 1,
+		"properties": {
+			"alias": "",
+			"colname": "order_customer_id",
+			"desc": "",
+			"schema": "sOrders",
+			"userinfo": ""
+		}
+	},
+	{
+		"ident": 32010,
+		"order": 2,
+		"properties": {
+			"alias": "",
+			"colname": "order_date",
+			"desc": "",
+			"schema": "sOrders",
+			"userinfo": ""
+		}
+	},
+	{
+		"ident": 32005,
+		"order": 3,
+		"properties": {
+			"alias": "",
+			"colname": "order_product_id",
+			"desc": "",
+			"schema": "sOrders",
+			"userinfo": ""
+		}
+	},
+	{
+		"ident": 32003,
+		"order": 4,
+		"properties": {
+			"alias": "",
+			"colname": "product_name",
+			"desc": "",
+			"schema": "sProducts",
+			"userinfo": ""
+		}
+	},
+	{
+		"ident": 32006,
+		"order": 5,
+		"properties": {
+			"alias": "",
+			"colname": "order_size",
+			"desc": "",
+			"schema": "sOrders",
+			"userinfo": ""
+		}
+	},
+	{
+		"ident": 32009,
+		"order": 6,
+		"properties": {
+			"alias": "",
+			"colname": "order_amount",
+			"desc": "",
+			"schema": "sOrders",
+			"userinfo": ""
+		}
+	},
+	{
+		"ident": 32011,
+		"order": 7,
+		"properties": {
+			"alias": "",
+			"colname": "order_id",
+			"desc": "",
+			"schema": "sOrders",
+			"userinfo": ""
+		}
+	},
+	{
+		"ident": 32013,
+		"order": 8,
+		"properties": {
+			"alias": "",
+			"colname": "order_price",
+			"desc": "",
+			"schema": "sOrders",
+			"userinfo": ""
+		}
+	},
+	{
+		"ident": 32014,
+		"order": 9,
+		"properties": {
+			"alias": "",
+			"colname": "order_prepared",
+			"desc": "",
+			"schema": "sOrders",
+			"userinfo": ""
+		}
+	},
+	{
+		"ident": 32015,
+		"order": 10,
+		"properties": {
+			"alias": "",
+			"colname": "order_cancel_request",
+			"desc": "",
+			"schema": "sOrders",
+			"userinfo": ""
+		}
+	},
+	{
+		"ident": 32016,
+		"order": 11,
+		"properties": {
+			"alias": "",
+			"colname": "order_paid_date",
+			"desc": "",
+			"schema": "sOrders",
+			"userinfo": ""
+		}
+	}
+]

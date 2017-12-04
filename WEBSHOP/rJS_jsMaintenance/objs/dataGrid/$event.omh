@@ -1,0 +1,10 @@
+On evClick
+	Do method handleButtons
+	
+On evDoubleClick
+	
+On evCellChanged
+	
+On evHeaderClick
+	
+On evHeadedListDisplayOrderChanged

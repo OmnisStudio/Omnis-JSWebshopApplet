@@ -1,0 +1,5 @@
+;  loads the name of the primary key of that instance
+;  creates a list of columns with the $primarykey property and searches for the first primary key
+Do $libs.[$cinst.$lib().$name].$schemas.[$cinst.$sqlclassname].$objs.$makelist($ref.$name,$ref.$primarykey) Returns columnList
+Do columnList.$search(columnList.c2=kTrue,kTrue,kFalse,kFalse,kFalse)
+Calculate iPrimaryKeyName as columnList.c1

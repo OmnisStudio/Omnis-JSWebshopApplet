@@ -1,0 +1,2 @@
+Do $cinst.$objs.modifyBtn.$enabled.$assign(iProductList.$line>0)
+Do $cinst.$objs.deleteBtn.$enabled.$assign(iProductList.$line>0)

@@ -1,0 +1,41 @@
+[
+	{
+		"name": "$getNextID",
+		"ident": 0,
+		"order": 1,
+		"desc": "returns the next available ID and updates the ",
+		"pvardefs": [
+			{
+				"name": "pTableName",
+				"order": 1,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000,
+				"param": 1
+			}
+		],
+		"lvardefs": [
+			{
+				"name": "oldRow",
+				"order": 4,
+				"type": "kRow",
+				"subtype": "",
+				"sublen": 0
+			},
+			{
+				"name": "statObj",
+				"order": 2,
+				"type": "kObject",
+				"subtype": ".SQLITEDAM.SQLITESESS",
+				"sublen": 0
+			},
+			{
+				"name": "transactionMode",
+				"order": 3,
+				"type": "kInteger",
+				"subtype": "k32bitint",
+				"sublen": 0
+			}
+		]
+	}
+]

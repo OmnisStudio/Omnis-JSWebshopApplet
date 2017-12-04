@@ -1,0 +1,23 @@
+If len(pCustomerRow.customer_name)=0
+	Calculate ivErrorText as 'Please enter your name'
+	Calculate ivFieldName as 'customer_name'
+	Quit method kFalse
+End If
+
+If pCustomerRow.$insert()
+	Do pOrderList.$first()
+	While pOrderList.$line
+		Do orderRow.$definefromsqlclass($tables.T_Orders)
+		Do orderRow.$assignrow(pOrderList,kTrue)
+		Calculate orderRow.order_customer_id as pCustomerRow.customer_id
+		Calculate orderRow.order_date as #D
+		Do orderRow.$insert() Returns ok
+		If not(ok)
+			Quit method kFalse
+		End If
+		Do pOrderList.$next()
+	End While
+	Quit method kTrue
+Else
+	Quit method kFalse
+End If

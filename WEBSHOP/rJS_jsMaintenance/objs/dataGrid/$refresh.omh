@@ -1,0 +1,11 @@
+;  there is either a new record or an updated record in iDataRow
+;  we need to refresh the list object in order to show the inserted or updated data
+Do iProductList.$search($ref.product_id=iDataRow.product_id,kTrue,kFalse,kFalse,kFalse)
+If iProductList.$line>0     ;; ok - this was an update the line was found
+	Do iProductList.$assignrow(iDataRow,kTrue)     ;; puts the data from iDataRow into the current line of iProductList
+Else     ;; oops - this was an insert
+	Do iProductList.$add().$assignrow(iDataRow,kTrue)     ;; adds a new line at the end of the list with the data from iDataRow
+	Do iProductList.$line.$assign(iProductList.$linecount())     ;; makes the last line the current one
+End If
+Do $cfield.$redraw()
+Do method handleButtons
